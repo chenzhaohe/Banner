@@ -473,7 +473,8 @@ public class Banner extends RelativeLayout implements ViewPager.OnPageChangeList
         if (lastOnePager != null) removeView(lastOnePager);
         mDefaultImg.setVisibility(GONE);
         if (imagePaths == null || imagePaths.isEmpty()) {
-            mDefaultImg.setVisibility(VISIBLE);
+            //无轮播数据的时候就不再显示控件了
+            //mDefaultImg.setVisibility(VISIBLE);
             return;
         }
         mRealPagers = imagePaths.size();
